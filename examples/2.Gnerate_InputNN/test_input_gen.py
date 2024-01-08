@@ -3,14 +3,14 @@ sys.path.append('/home3/zcyu2/n2p2-one_dragon_package')
 import n2p2od
 #1 Initialize
 #初始化包括建立一个文件夹存放后续的训练数据，复制必须的模板文件到当前目录，以及根据目标元素生成对称函数等。
-init_gen = n2p2od.generator.InitGen()
-init_gen.generate_init()
+#init_gen = n2p2od.generator.InitGen()
+#init_gen.generate_init()
 #2 Generate input.data
-data_gen = n2p2od.generator.DataGen("cp2k-pos-1.xyz","cp2k-frc-1.xyz","cp2k-1.restart")
-data_gen.generate_data()
+#data_gen = n2p2od.generator.DataGen("cp2k-pos-1.xyz","cp2k-frc-1.xyz","cp2k-1.restart")
+#data_gen.generate_data()
 #3 Generate input.nn
-#nn_gen = n2p2od.generator.NNGen("cp2k-1.restart")
-#nn_gen.generate_nn()
+nn_gen = n2p2od.generator.NNGen("cp2k-1.restart")
+nn_gen.generate_nn()
 #4 Generate SymFunc and auto-modify the input.nn
 #symfunc_gen = n2p2od.generator.SymFuncGen()
 #symfunc_gen.generate_symfunc('radial angular_narrow angular_wide')
